@@ -1,6 +1,7 @@
 
 import React from 'react'
 
+
 const PostDetail = ({ post }) => {
 
     const getContentFragment = (index, text, obj, type) => {
@@ -75,4 +76,5 @@ const PostDetail = ({ post }) => {
 }
 
 export default PostDetail
+
 

@@ -1,12 +1,12 @@
-
+import React, {useState, useEffect} from 'react';
 import Head from 'next/head';
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from '../services'
 import { FeaturedPosts} from '../sections';
 
-
 export default function Home({ posts }){
-  return (
+
+   return (
     <div className="container mx-auto px-8 mb-8">
       <Head>
         <title>Crypto Blog</title>
@@ -32,7 +32,8 @@ export async function getStaticProps() {
   const posts = (await getPosts()) || [];
 
  return {
-     props: { posts }
- }
+     props: { posts },
+ };
   
 }
+
