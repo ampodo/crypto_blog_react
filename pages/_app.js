@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Layout } from '../components';
+import React from 'react';
+import { Layout,useRightClickMenu, Menu } from '../components';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.scss';
 
-
 function MyApp({ Component, pageProps }) {
+
+  const { x, y, showMenu } = useRightClickMenu();
+
+
   return (
    <Layout>
-   <Component {...pageProps} />
+    <Menu x={x} y={y} showMenu={showMenu}/>
+   <Component
+   {...pageProps} />
    </Layout>
   )
 }
